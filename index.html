@@ -16,38 +16,6 @@
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <img
-          id="profile"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/%E5%A4%A7%E9%A0%AD%E7%85%A7.png?v=1699354398583"
-        />
-        <img
-          id="website"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/%E7%B6%B2%E7%AB%99%E5%9C%962.png?v=1701340896828"
-        />
-        <img
-          id="Email"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/EMAIL%E5%9C%962.png?v=1701340897654"
-        />
-        <img
-          id="phone"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/%E9%9B%BB%E8%A9%B1%E5%9C%962.png?v=1701340895933"
-        />
-        <img
-          id="image LINE"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/LINE%E5%9C%96.png?v=1701317400633"
-        />
-        <img
-          id="image Youtube"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/YOUTUBE.png?v=1702521912035"
-        />
-        <img
-          id="image IG"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/IG%E5%9C%96.png?v=1701317401398"
-        />
-        <img
-          id="image FB"
-          src="https://cdn.glitch.global/d211842b-4e2a-433c-9456-93f3cc8260fe/FB.png?v=1700978270412"
-        />
 
         <video
           id="video1"
@@ -71,11 +39,7 @@
       </a-camera>
 
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-entity
-          text="value: Red Panda Keeper\nMingHsun Li; color: #FFF"
-          position="1.2 0.68 -1.5"
-          scale="2 2 2"
-        ></a-entity>
+        
         <a-gltf-model
           rotation="0 0 0 "
           position="-0.25 -0.15 0"
@@ -83,76 +47,7 @@
           src="#raccoonModel"
           animation-mixer
         ></a-gltf-model>
-        <a-image
-          src="#profile"
-          width="0.55"
-          height="0.55"
-          position="0.6 0.9 -1.5"
-          rotation="0 0 0"
-        ></a-image>
-        <a-image
-          src="#website"
-          width="0.65"
-          height="0.25"
-          position="0.6 0.4 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: https://isaoinvest.com"
-        ></a-image>
-        <a-image
-          src="#Email"
-          width="0.65"
-          height="0.25"
-          position="0.6 0.1 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: mailto:isaoinvest@gmail.com"
-        ></a-image>
-        <a-image
-          src="#phone"
-          width="0.65"
-          height="0.23"
-          position="0.6 -0.2 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: tel:+886920820259"
-        ></a-image>
-        <a-image
-          src="#image LINE"
-          width="0.3"
-          height="0.3"
-          position="0.6 -0.65 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: https://line.me/R/ti/p/@722fdkca"
-        ></a-image>
-        <a-image
-          src="#image Youtube"
-          width="0.3"
-          height="0.3"
-          position="0.2 -0.65 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: https://www.youtube.com/channel/UC7hJoQaFXoqB-tW4zACOtvQ"
-        ></a-image>
-        <a-image
-          src="#image IG"
-          width="0.3"
-          height="0.3"
-          position="-0.2 -0.65 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: https://www.instagram.com/isaoinvest"
-        ></a-image>
-        <a-image
-          src="#image FB"
-          width="0.3"
-          height="0.3"
-          position="-0.6 -0.65 -1.5"
-          rotation="0 0 0"
-          class="clickable"
-          link="href: https://www.facebook.com/profile.php?id=61552552833098"
-        ></a-image>
+        
       </a-entity>
       <a-entity mindar-image-target="targetIndex: 1">
         <a-video
@@ -182,12 +77,5 @@
         </script>
       </a-entity>
     </a-scene>
-
-    <script>
-      const imageclick = document.querySelector("#image FB");
-      imageclick.addEventListener("click", (event) => {
-        console.log("image click");
-      });
-    </script>
   </body>
 </html>
