@@ -1,44 +1,65 @@
 <!DOCTYPE html>
-
 <html>
-<head>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<script src="https://raw.githubusercontent.com/isaoinvest/isaoinvest/main/qk7ulnz7ed.mp4"></script>
-<script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
-</head>
-<body>
-<a-scene color-space="sRGB" device-orientation-permission-ui="enabled: false" mindar-image="imageTargetSrc: https://cdn.glitch.global/5ccc0053-b02d-4729-80a7-aa2242565329/KKtargets.mind?v=1703167402947;warmupTolerance:5; missTolerance:600; filterMinCF:0.000001; filterBeta:500" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false">
-<a-assets>
-<video autoplay="" id="video1" loop="" src="https://raw.githubusercontent.com/isaoinvest/isaoinvest/main/一畫千言新聞報導.mp4"></video>
-<a-asset-item id="raccoonModel" src="https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/band-example/raccoon/scene.gltf">
-</a-asset-item>
-</a-assets>
-<a-camera cursor="fuse: false; rayOrigin: mouse;" look-controls="enabled: false" position="0 0 0" raycaster="far: ${customFields.libVersion}; objects: .clickable">
-</a-camera>
-<a-entity mindar-image-target="targetIndex: 0">
-<a-gltf-model animation-mixer="" position="-0.25 -0.15 0" rotation="0 0 0 " scale="0.09 0.09 0.09" src="#raccoonModel"></a-gltf-model>
-</a-entity>
-<a-entity mindar-image-target="targetIndex: 1">
-<a-video class="clickable" click-handler1="" height="1.05" position="0 0 0" rotation="0 0 0" src="#video1" width="1.5"></a-video>
-<script>
-          AFRAME.registerComponent("click-handler1", {
-            init: function () {
-              var video = document.querySelector("#video1");
-              var playing = false;
-              this.el.addEventListener("click", function () {
-                if (!playing) {
-                  video.play();
-                } else {
-                  video.pause();
-                }
-                playing = !playing;
-              });
-            },
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+  </head>
+  <body>
+    <a-scene
+      mindar-image="imageTargetSrc: https://cdn.glitch.global/4301ee52-8439-4f33-94ee-077bb780129f/d6772f94-2126-46f5-9c34-867a9f6557ba.TARGET%20HANABE.mind?v=1705127790359;warmupTolerance:5; missTolerance:200; filterMinCF:0.000001; filterBeta:250"
+      color-space="sRGB"
+      renderer="colorManagement: true, physicallyCorrectLights"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-assets>
+        <video
+          id="video"
+          src="https://cdn.glitch.me/4301ee52-8439-4f33-94ee-077bb780129f/%E7%85%99%E7%81%AB6-2.mp4?v=1705128230535"
+          loop
+        ></video>
+
+        <a-asset-item></a-asset-item>
+      </a-assets>
+
+      <a-camera
+        position="0 0 0"
+        look-controls="enabled: false"
+        cursor="fuse: false; rayOrigin: mouse;"
+        raycaster="far: ${customFields.libVersion}; objects: .clickable"
+      >
+      </a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <a-video
+          src="#video"
+          width="1.05"
+          height="1.45"
+          position="0 0 0"
+          rotation="0 0 0"
+          class="clickable"
+          click-handler
+        ></a-video>
+      </a-entity>
+    </a-scene>
+
+    <script>
+      AFRAME.registerComponent("click-handler", {
+        init: function () {
+          var video = document.querySelector("#video");
+          var playing = false;
+          this.el.addEventListener("click", function () {
+            if (!playing) {
+              video.play();
+            } else {
+              video.pause();
+            }
+            playing = !playing;
           });
-        </script>
-</a-entity>
-</a-scene>
-</body>
+        },
+      });
+    </script>
+  </body>
 </html>
